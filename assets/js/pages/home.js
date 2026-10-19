@@ -9,7 +9,7 @@ RV.pageInit = function () {
 
   // Kartu layanan
   document.getElementById('serviceGrid').innerHTML = RV.layanan.map(function (l, i) {
-    return '<a class="service-card" href="layanan.html?id=' + l.id + '" data-reveal style="--d:' + (i % 4) * 90 + 'ms">' +
+    return '<a class="service-card" href="layanan/?id=' + l.id + '" data-reveal style="--d:' + (i % 4) * 90 + 'ms">' +
       '<div class="service-inner" data-tilt="5">' +
         '<span class="sheen"></span>' +
         '<span class="service-num">' + String(i + 1).padStart(2, '0') + '</span>' +
@@ -59,7 +59,7 @@ RV.pageInit = function () {
   var ratios = ['4 / 5', '1 / 1', '3 / 4', '4 / 3', '2 / 3', '5 / 4', '3 / 4', '1 / 1'];
   document.getElementById('showcase').innerHTML = RV.layanan.map(function (l, i) {
     var p = l.portofolio[0] || { src: 'assets/img/layanan/' + l.id + '.jpg', judul: l.nama };
-    return '<a class="show-item" href="layanan.html?id=' + l.id + '" data-reveal style="--d:' + (i % 4) * 80 + 'ms" data-cursor="view">' +
+    return '<a class="show-item" href="layanan/?id=' + l.id + '" data-reveal style="--d:' + (i % 4) * 80 + 'ms" data-cursor="view">' +
       u.imgSlot(p.src, { label: p.judul, ratio: ratios[i % ratios.length] }) +
       '<div class="show-meta"><div><span>' + l.nama + '</span><strong>' + u.esc(p.judul) + '</strong></div></div></a>';
   }).join('');

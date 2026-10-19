@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Layanan | Rayden Viz</title>
-  <meta name="description" content="Detail layanan, paket harga, dan portofolio Rayden Viz.">
+  <base href="../">
+  <title>Daftar Pesanan | Rayden Viz</title>
+  <meta name="description" content="Pantau status pesanan yang sedang diproses oleh Rayden Viz.">
   <meta name="theme-color" content="#151515">
   <link rel="icon" href="assets/img/logo/favicon.svg" type="image/svg+xml">
 
@@ -16,54 +17,42 @@
   <link rel="stylesheet" href="assets/css/layout.css">
   <link rel="stylesheet" href="assets/css/components.css">
   <link rel="stylesheet" href="assets/css/animations.css">
-  <link rel="stylesheet" href="assets/css/pages/layanan.css">
+  <link rel="stylesheet" href="assets/css/pages/pesanan.css">
 </head>
-<!--
-  Satu file ini dipakai untuk semua kategori.
-  Contoh alamat: layanan.html?id=web-design
-  Isi halaman diambil dari assets/js/data/layanan.js
--->
-<body data-page="layanan">
+<body data-page="pesanan">
 
   <div id="site-header"></div>
 
   <main>
-    <!-- Judul kategori -->
-    <section class="page-hero page-hero-sm">
+    <section class="page-hero">
       <canvas class="dot-field" aria-hidden="true"></canvas>
       <div class="container">
-        <nav class="breadcrumb" aria-label="Breadcrumb" data-reveal>
-          <a href="index.html">Home</a><span class="sep"></span>
-          <a href="index.html#layanan">Kategori</a><span class="sep"></span>
-          <span aria-current="page" id="crumbName"></span>
-        </nav>
-        <p class="eyebrow" data-reveal id="catIndex"></p>
-        <h1 id="catTitle"></h1>
+        <p class="eyebrow" data-reveal>Daftar Pesanan</p>
+        <h1 data-split>Pantau progres <em class="text-gold">karya Anda.</em></h1>
+        <p class="lead" data-reveal style="--d:250ms">Cari kode pesanan Anda untuk melihat status terkini. Nama klien disamarkan untuk menjaga privasi.</p>
       </div>
     </section>
 
-    <!-- Produk: preview di kiri, info di kanan -->
-    <section class="section-tight product-section">
-      <div class="container product" id="product"></div>
-    </section>
-
-    <!-- Portofolio -->
-    <section class="section section-alt" id="portofolio">
+    <section class="section-tight orders-section">
       <div class="container">
-        <div class="portfolio-head">
-          <div>
-            <p class="eyebrow" data-reveal>Portofolio</p>
-            <h2 class="section-title" id="portoTitle"></h2>
-          </div>
-          <div class="chips" id="portoFilter" data-reveal style="--d:150ms"></div>
-        </div>
-        <div class="masonry" id="portoGrid"></div>
-      </div>
-    </section>
+        <!-- Ringkasan jumlah per status -->
+        <div class="order-stats" id="orderStats"></div>
 
-    <!-- Navigasi kategori lain -->
-    <section class="cat-nav">
-      <div class="container cat-nav-inner" id="catNav"></div>
+        <!-- Pencarian dan filter -->
+        <div class="order-toolbar" data-reveal>
+          <label class="search-box">
+            <span class="sr-only">Cari pesanan</span>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+            <input class="input" type="search" id="orderSearch" placeholder="Cari kode, layanan, atau nama">
+          </label>
+          <div class="chips" id="orderFilter"></div>
+        </div>
+
+        <!-- Daftar pesanan diisi oleh pesanan.js -->
+        <div class="order-list" id="orderList"></div>
+
+        <p class="order-updated" data-reveal>Data diperbarui manual. Terakhir diperbarui <span id="orderUpdated"></span>.</p>
+      </div>
     </section>
   </main>
 
@@ -79,12 +68,19 @@
   <script src="assets/js/data/list-layanan/polaroid.js"></script>
   <script src="assets/js/data/list-layanan/stiker.js"></script>
   <script src="assets/js/data/layanan.js"></script>
+  <script src="assets/js/data/status-pesanan.js"></script>
+  <script src="assets/js/data/list-status/antre.js"></script>
+  <script src="assets/js/data/list-status/ditunda.js"></script>
+  <script src="assets/js/data/list-status/proses.js"></script>
+  <script src="assets/js/data/list-status/revisi.js"></script>
+  <script src="assets/js/data/list-status/selesai.js"></script>
+  <script src="assets/js/data/index.js"></script>
   <script src="assets/js/core/icons.js"></script>
   <script src="assets/js/core/utils.js"></script>
   <script src="assets/js/core/layout.js"></script>
   <script src="assets/js/core/animations.js"></script>
   <script src="assets/js/core/scene.js"></script>
-  <script src="assets/js/pages/layanan.js"></script>
+  <script src="assets/js/pages/pesanan.js"></script>
   <script src="assets/js/core/boot.js"></script>
 </body>
 </html>

@@ -187,10 +187,10 @@ RV.pageInit = function () {
   var prev = list[(idx - 1 + list.length) % list.length];
   var next = list[(idx + 1) % list.length];
   document.getElementById('catNav').innerHTML =
-    '<a class="cat-link prev" href="layanan.html?id=' + prev.id + '" data-reveal="left">' +
+    '<a class="cat-link prev" href="?id=' + prev.id + '" data-reveal="left">' +
       '<span class="cat-arrow">' + RV.icon('arrowRight') + '</span>' +
       '<span><small>Sebelumnya</small><strong>' + prev.nama + '</strong></span></a>' +
-    '<a class="cat-link next" href="layanan.html?id=' + next.id + '" data-reveal="right">' +
+    '<a class="cat-link next" href="?id=' + next.id + '" data-reveal="right">' +
       '<span><small>Berikutnya</small><strong>' + next.nama + '</strong></span>' +
       '<span class="cat-arrow">' + RV.icon('arrowRight') + '</span></a>';
 };

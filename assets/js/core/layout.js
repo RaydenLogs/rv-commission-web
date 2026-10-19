@@ -18,15 +18,15 @@ RV.layout = {
     // Isi dropdown kategori dari data layanan
     var kategori = RV.layanan.map(function (l) {
       var aktif = page === 'layanan' && currentId === l.id ? ' is-active' : '';
-      return '<a class="drop-item' + aktif + '" href="layanan.html?id=' + l.id + '">' +
+      return '<a class="drop-item' + aktif + '" href="layanan/?id=' + l.id + '">' +
         '<span class="drop-icon">' + RV.icon(l.ikon) + '</span>' +
         '<span><span class="drop-name">' + l.nama + '</span>' +
         '<span class="drop-sub">Mulai ' + RV.util.rupiah(RV.util.hargaMulai(l)) + '</span></span></a>';
     }).join('');
 
     var lainnya = [
-      { href: 'cara-pesan.html', nama: 'Cara Pesan dan FAQ', sub: 'Alur pemesanan dan pertanyaan umum', ikon: 'info', key: 'cara-pesan' },
-      { href: 'tos.html', nama: 'Syarat dan Ketentuan', sub: 'Aturan layanan dan kerja sama', ikon: 'shield', key: 'tos' }
+      { href: 'cara-pesan/', nama: 'Cara Pesan dan FAQ', sub: 'Alur pemesanan dan pertanyaan umum', ikon: 'info', key: 'cara-pesan' },
+      { href: 'tos/', nama: 'Syarat dan Ketentuan', sub: 'Aturan layanan dan kerja sama', ikon: 'shield', key: 'tos' }
     ].map(function (m) {
       return '<a class="drop-item' + (page === m.key ? ' is-active' : '') + '" href="' + m.href + '">' +
         '<span class="drop-icon">' + RV.icon(m.ikon) + '</span>' +
@@ -46,9 +46,9 @@ RV.layout = {
             link('index.html', 'Home', 'home') +
             '<li class="has-drop"><button class="nav-link' + (page === 'layanan' ? ' is-active' : '') + '" aria-expanded="false">Kategori ' + RV.icon('chevronDown') + '</button>' +
               '<div class="dropdown dropdown-wide"><div class="dropdown-grid">' + kategori + '</div></div></li>' +
-            link('pesanan.html', 'Pesanan', 'pesanan') +
-            link('pembayaran.html', 'Pembayaran', 'pembayaran') +
-            link('kontak.html', 'Kontak', 'kontak') +
+            link('pesanan/', 'Pesanan', 'pesanan') +
+            link('pembayaran/', 'Pembayaran', 'pembayaran') +
+            link('kontak/', 'Kontak', 'kontak') +
             '<li class="has-drop"><button class="nav-link' + (page === 'tos' || page === 'cara-pesan' ? ' is-active' : '') + '" aria-expanded="false">Lainnya ' + RV.icon('chevronDown') + '</button>' +
               '<div class="dropdown"><div class="dropdown-grid">' + lainnya + '</div></div></li>' +
           '</ul></nav>' +
