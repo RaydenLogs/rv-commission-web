@@ -410,6 +410,7 @@ select.input option { background: #151515; }
 }
 .status.is-live::before { animation: pulseDot 1.8s ease-in-out infinite; }
 .status-antre { --c: #9AA3B5; }
+.status-ditunda { --c: #B8C0D1; }
 .status-proses { --c: #DAAB2D; }
 .status-revisi { --c: #D98E5B; }
 .status-selesai { --c: #7FB98A; }

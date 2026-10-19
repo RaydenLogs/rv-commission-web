@@ -7,10 +7,11 @@
 RV.pageInit = function () {
   var u = RV.util;
   var data = RV.pesanan || [];
-  var statusInfo = {
-    antre: { label: 'Dalam Antrean' },
+  var statusInfo = RV.statusPesanan || {
     proses: { label: 'Dikerjakan' },
     revisi: { label: 'Tahap Revisi' },
+    ditunda: { label: 'Ditunda' },
+    antre: { label: 'Dalam Antrean' },
     selesai: { label: 'Selesai' }
   };
   var filter = 'semua';
