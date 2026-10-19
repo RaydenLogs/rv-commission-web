@@ -126,7 +126,7 @@ RV.pesananAntre = [
     kode: "RV-PL-2608-001",
     klien: "Tita",
     layanan: "polaroid",
-    detail: "40",
+    detail: "40 foto polaroid",
     masuk: "3 Agu 2026",
     estimasi: "-",
     progres: 0,
