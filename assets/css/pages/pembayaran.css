@@ -1,0 +1,161 @@
+/* =========================================
+   HALAMAN PEMBAYARAN
+   ========================================= */
+
+/* Langkah */
+.pay-steps-section { padding-top: 0; padding-bottom: clamp(30px, 4vw, 50px); }
+.pay-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.pay-steps li { display: flex; gap: 18px; padding: 26px 28px; }
+.pay-steps li + li { border-left: 1px solid var(--line-soft); }
+.pay-steps span { font-family: var(--font-display); font-style: italic; font-weight: 600; font-size: 1.05rem; color: var(--primary); line-height: 1.2; }
+.pay-steps strong { display: block; font-weight: 600; }
+.pay-steps p { font-size: 0.86rem; margin-top: 2px; }
+
+/* Grid utama */
+.pay-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(28px, 4vw, 56px); align-items: start; }
+
+/* Kartu QRIS */
+.qris-wrap { position: sticky; top: calc(var(--header-h) + 24px); }
+.qris-card {
+  position: relative;
+  padding: 26px;
+  border-radius: calc(var(--radius) + 6px);
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(120% 80% at 100% 0%, rgba(218, 171, 45, 0.12), transparent 50%),
+    var(--surface);
+  overflow: hidden;
+}
+.qris-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.qris-label { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-display); font-size: 1.3rem; font-weight: 600; letter-spacing: -0.02em; }
+.qris-label .icon { color: var(--primary); width: 24px; height: 24px; }
+.qris-hint { font-size: 0.74rem; color: var(--dim); }
+.qris-frame {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 22px 0;
+  padding: 14px;
+  border-radius: var(--radius);
+  background: #f7f4ec;
+  overflow: hidden;
+  transform: translateZ(30px);
+}
+.qris-frame .img-slot { border-radius: 12px; aspect-ratio: 1; background: #f7f4ec; }
+.qris-frame .img-slot.is-empty { background: #1a1a1a; }
+/* Garis pindai bergerak */
+.qris-scan {
+  position: absolute;
+  left: 14px; right: 14px; top: 14px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  animation: scanMove 3.2s var(--ease-soft) infinite;
+  opacity: 0.8;
+}
+@keyframes scanMove { 0%, 100% { top: 14px; } 50% { top: calc(100% - 16px); } }
+.qris-bottom { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.qris-bottom small { display: block; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--dim); }
+.qris-bottom strong { font-weight: 600; letter-spacing: 0.08em; }
+
+/* Metode transfer */
+.pay-methods { display: grid; gap: 34px; }
+.pay-group-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+.pay-group-title .icon { color: var(--primary); width: 22px; height: 22px; }
+.pay-list { display: grid; gap: 12px; }
+.pay-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 20px;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition: border-color 0.45s var(--ease), transform 0.45s var(--ease);
+}
+.pay-item:hover { border-color: var(--line-strong); transform: translateX(4px); }
+.pay-info { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.pay-name { font-size: 0.74rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--primary); }
+.pay-info .copy-num { font-size: clamp(1rem, 2.2vw, 1.2rem); overflow-wrap: anywhere; }
+.pay-owner { font-size: 0.8rem; color: var(--dim); }
+
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 42px;
+  padding: 0 16px;
+  border-radius: 100px;
+  border: 1px solid var(--line);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+  flex-shrink: 0;
+  transition: all 0.4s var(--ease);
+}
+.copy-btn .icon { width: 16px; height: 16px; }
+.copy-btn:hover { color: #1b1b1b; background: var(--primary); border-color: var(--primary); }
+.copy-btn.is-done { color: #1b1b1b; background: #7FB98A; border-color: #7FB98A; }
+
+/* Mitra tunai */
+.cash-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; }
+.cash-card {
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  background: var(--surface);
+  overflow: hidden;
+  transition: border-color 0.45s var(--ease);
+}
+.cash-card:hover { border-color: var(--line); }
+.cash-photo .img-slot { aspect-ratio: 16 / 9; border-radius: 0; }
+.cash-photo .img-slot img { transition: transform 1.2s var(--ease), opacity 0.9s var(--ease); }
+.cash-card:hover .cash-photo img { transform: scale(1.05); }
+.cash-body { padding: 24px; display: grid; gap: 10px; }
+.cash-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--primary); }
+.cash-tag .icon { width: 16px; height: 16px; }
+.cash-body h3 { font-size: 1.3rem; }
+.cash-body p { display: flex; gap: 10px; align-items: flex-start; font-size: 0.88rem; }
+.cash-body p .icon { width: 16px; height: 16px; margin-top: 4px; color: var(--secondary); }
+.cash-body .link-arrow { margin-top: 8px; }
+
+/* Konfirmasi */
+.confirm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding: clamp(30px, 5vw, 50px);
+  border-radius: calc(var(--radius) + 6px);
+  border: 1px solid var(--line);
+  background: linear-gradient(120deg, rgba(218, 171, 45, 0.1), transparent 60%), var(--surface);
+}
+.confirm h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); }
+.confirm p { margin-top: 6px; }
+
+@media (max-width: 960px) {
+  .pay-grid { grid-template-columns: 1fr; }
+  .qris-wrap { position: relative; top: 0; max-width: 460px; margin-inline: auto; width: 100%; }
+  .pay-steps { grid-template-columns: 1fr; }
+  .pay-steps li + li { border-left: 0; border-top: 1px solid var(--line-soft); }
+}
+
+@media (max-width: 600px) {
+  .qris-card { padding: 18px; }
+  .pay-item { flex-wrap: wrap; padding: 16px; gap: 14px; }
+  .pay-logo { width: 50px; height: 50px; border-radius: 14px; }
+  .copy-btn { width: 100%; justify-content: center; }
+  .confirm .btn { width: 100%; }
+  .cash-grid { grid-template-columns: 1fr; }
+}

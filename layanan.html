@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id" class="is-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Layanan | Rayden Viz</title>
+  <meta name="description" content="Detail layanan, paket harga, dan portofolio Rayden Viz.">
+  <meta name="theme-color" content="#151515">
+  <link rel="icon" href="assets/img/logo/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/pages/layanan.css">
+</head>
+<!--
+  Satu file ini dipakai untuk semua kategori.
+  Contoh alamat: layanan.html?id=web-design
+  Isi halaman diambil dari assets/js/data/layanan.js
+-->
+<body data-page="layanan">
+
+  <div id="site-header"></div>
+
+  <main>
+    <!-- Judul kategori -->
+    <section class="page-hero page-hero-sm">
+      <canvas class="dot-field" aria-hidden="true"></canvas>
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb" data-reveal>
+          <a href="index.html">Home</a><span class="sep"></span>
+          <a href="index.html#layanan">Kategori</a><span class="sep"></span>
+          <span aria-current="page" id="crumbName"></span>
+        </nav>
+        <p class="eyebrow" data-reveal id="catIndex"></p>
+        <h1 id="catTitle"></h1>
+      </div>
+    </section>
+
+    <!-- Produk: preview di kiri, info di kanan -->
+    <section class="section-tight product-section">
+      <div class="container product" id="product"></div>
+    </section>
+
+    <!-- Portofolio -->
+    <section class="section section-alt" id="portofolio">
+      <div class="container">
+        <div class="portfolio-head">
+          <div>
+            <p class="eyebrow" data-reveal>Portofolio</p>
+            <h2 class="section-title" id="portoTitle"></h2>
+          </div>
+          <div class="chips" id="portoFilter" data-reveal style="--d:150ms"></div>
+        </div>
+        <div class="masonry" id="portoGrid"></div>
+      </div>
+    </section>
+
+    <!-- Navigasi kategori lain -->
+    <section class="cat-nav">
+      <div class="container cat-nav-inner" id="catNav"></div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/data/layanan.js"></script>
+  <script src="assets/js/core/icons.js"></script>
+  <script src="assets/js/core/utils.js"></script>
+  <script src="assets/js/core/layout.js"></script>
+  <script src="assets/js/core/animations.js"></script>
+  <script src="assets/js/core/scene.js"></script>
+  <script src="assets/js/pages/layanan.js"></script>
+  <script src="assets/js/core/boot.js"></script>
+</body>
+</html>

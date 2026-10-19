@@ -1,0 +1,5 @@
+qris.png  (gambar QRIS)
+gopay.png (logo GoPay)
+dana.png  (logo DANA)
+bri.png   (logo Bank BRI)
+Jika logo belum ada, otomatis tampil kotak teks berwarna.

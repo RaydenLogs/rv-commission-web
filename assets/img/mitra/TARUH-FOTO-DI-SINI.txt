@@ -1,0 +1,1 @@
+Foto lokasi mitra pembayaran tunai: mitra-1.jpg, mitra-2.jpg, dst. Atur di assets/js/config.js bagian cash.

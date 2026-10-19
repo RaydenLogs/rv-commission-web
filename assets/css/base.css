@@ -1,0 +1,159 @@
+/* =========================================
+   BASE
+   Variabel warna, reset, dan tipografi dasar
+   ========================================= */
+
+:root {
+  /* Warna utama */
+  --primary: #DAAB2D;
+  --secondary: #A57A03;
+  --body: #151515;
+
+  /* Warna turunan */
+  --gold-soft: #F1D27C;
+  --bg-deep: #0f0f0f;
+  --bg-darker: #0b0b0b;
+  --surface: #1c1c1c;
+  --surface-2: #232323;
+  --line: rgba(218, 171, 45, 0.18);
+  --line-strong: rgba(218, 171, 45, 0.4);
+  --line-soft: rgba(255, 255, 255, 0.07);
+  --text: #F4F0E6;
+  --muted: #ABA597;
+  --dim: #7c776d;
+
+  --gold-grad: linear-gradient(110deg, #A57A03 0%, #DAAB2D 30%, #F6DC8F 50%, #DAAB2D 70%, #A57A03 100%);
+  --gold-fill: linear-gradient(135deg, #E4B83A 0%, #DAAB2D 45%, #B88A0E 100%);
+
+  /* Huruf */
+  --font-display: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* Ukuran */
+  --container: 1240px;
+  --header-h: 78px;
+  --radius: 20px;
+  --radius-sm: 12px;
+  --radius-xs: 8px;
+
+  /* Gerak */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.45, 0, 0.2, 1);
+}
+
+/* Reset */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  overflow-x: clip;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-h) + 20px);
+}
+
+body {
+  background: var(--body);
+  color: var(--text);
+  font-family: var(--font-body);
+  line-height: 1.7;
+  font-size: 15.5px;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main { flex: 1; }
+img, svg, canvas { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+input, select, textarea { font: inherit; color: inherit; }
+ul, ol { list-style: none; }
+::selection { background: var(--primary); color: #1c1c1c; }
+:focus-visible { outline: 1px solid var(--primary); outline-offset: 4px; border-radius: 4px; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-darker); }
+::-webkit-scrollbar-thumb { background: #3a3426; border-radius: 10px; border: 2px solid var(--bg-darker); }
+::-webkit-scrollbar-thumb:hover { background: var(--secondary); }
+
+/* Tekstur halus di seluruh halaman */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 900;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Tipografi */
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+h3, h4 { letter-spacing: -0.02em; line-height: 1.2; }
+
+p { color: var(--muted); }
+
+.text-gold {
+  background: var(--gold-grad);
+  background-size: 220% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: goldShimmer 7s linear infinite;
+}
+
+.italic { font-style: italic; }
+.mono { font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace; letter-spacing: 0.02em; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* Wadah dan section */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: clamp(18px, 4vw, 36px);
+}
+
+.section { position: relative; padding-block: clamp(76px, 10vw, 136px); }
+.section-alt { background: var(--bg-deep); }
+.section-tight { padding-block: clamp(56px, 7vw, 96px); }
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+.eyebrow::before {
+  content: "";
+  width: 34px;
+  height: 1px;
+  background: currentColor;
+  transform-origin: left;
+}
+
+.section-head { max-width: 760px; margin-bottom: clamp(40px, 6vw, 68px); }
+.section-head.center { margin-inline: auto; text-align: center; }
+.section-head.center .eyebrow::after { content: ""; width: 34px; height: 1px; background: currentColor; }
+.section-title { font-size: clamp(2rem, 4.4vw, 3.2rem); margin-top: 18px; }
+.section-lead { margin-top: 18px; font-size: 1.05rem; max-width: 580px; }
+.center .section-lead { margin-inline: auto; }
+
+/* Garis pemisah tipis */
+.hairline { height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent); border: 0; }

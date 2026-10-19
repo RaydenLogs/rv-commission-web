@@ -1,0 +1,10 @@
+Foto preview utama tiap kategori. Nama file harus sama dengan id layanan:
+desain-grafis.jpg
+photo-editing.jpg
+web-design.jpg
+app-design.jpg
+roblox.jpg
+model-3d.jpg
+polaroid.jpg
+stiker.jpg
+Rasio yang disarankan 4:3 (misal 1600x1360).

@@ -1,0 +1,1 @@
+Opsional: taruh logo.png di sini lalu isi logo: 'assets/img/logo/logo.png' di assets/js/config.js. favicon.svg adalah ikon tab browser.

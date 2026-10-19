@@ -1,0 +1,80 @@
+/* =========================================
+   HALAMAN KONTAK
+   ========================================= */
+
+.social-section { padding-top: 0; }
+.social-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.social-card { display: block; }
+.social-inner {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 28px 28px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line-soft);
+  background: var(--surface);
+  overflow: hidden;
+  transition: border-color 0.5s var(--ease), transform 0.7s var(--ease);
+}
+.social-card:hover .social-inner { border-color: var(--line-strong); }
+.social-icon {
+  width: 64px; height: 64px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  color: var(--primary);
+  transition: background 0.5s var(--ease), color 0.5s var(--ease), transform 0.6s var(--ease);
+}
+.social-icon .icon { width: 28px; height: 28px; }
+.social-card:hover .social-icon { background: var(--primary); color: #1b1b1b; transform: scale(1.06); }
+.social-name { margin-top: 28px; font-family: var(--font-display); font-size: 1.45rem; font-weight: 600; letter-spacing: -0.03em; line-height: 1.15; }
+.social-handle { margin-top: 4px; font-size: 0.9rem; color: var(--primary); font-weight: 600; }
+.social-desc { margin-top: 12px; font-size: 0.88rem; color: var(--muted); }
+.social-go {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 26px;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.social-go .icon { width: 16px; height: 16px; color: var(--primary); transition: transform 0.5s var(--ease); }
+.social-card:hover .social-go .icon { transform: translate(3px, -3px); }
+
+/* Form */
+.contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(36px, 6vw, 90px); align-items: start; }
+.contact-info { margin-top: 36px; display: grid; gap: 22px; }
+.contact-info li { display: flex; gap: 16px; align-items: flex-start; }
+.contact-info .icon { width: 20px; height: 20px; margin-top: 4px; color: var(--primary); }
+.contact-info small { display: block; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--dim); }
+
+.contact-form {
+  display: grid;
+  gap: 20px;
+  padding: clamp(24px, 4vw, 40px);
+  border-radius: calc(var(--radius) + 6px);
+  border: 1px solid var(--line-soft);
+  background: var(--surface);
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.form-actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 4px; }
+.form-error { font-size: 0.84rem; color: #E08A6A; min-height: 1em; }
+
+@media (max-width: 960px) {
+  .social-grid { grid-template-columns: 1fr; }
+  .social-inner { display: grid; grid-template-columns: auto 1fr; column-gap: 20px; padding: 24px; }
+  .social-icon { grid-row: span 4; width: 56px; height: 56px; }
+  .social-name { margin-top: 0; font-size: 1.3rem; }
+  .social-go { padding-top: 14px; }
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
+  .form-actions .btn { flex: 1 1 100%; }
+  .social-inner { grid-template-columns: 1fr; }
+  .social-icon { grid-row: auto; margin-bottom: 18px; }
+}

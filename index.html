@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id" class="is-loading">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rayden Viz | Studio Kreatif Digital</title>
+  <meta name="description" content="Rayden Viz menerima jasa desain grafis, photo editing, web dan mobile app design, Roblox map development, model 3D, cetak polaroid, dan cetak stiker.">
+  <meta name="theme-color" content="#151515">
+  <link rel="icon" href="assets/img/logo/favicon.svg" type="image/svg+xml">
+
+  <!-- Huruf -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+
+  <!-- Gaya umum -->
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <!-- Gaya khusus halaman ini -->
+  <link rel="stylesheet" href="assets/css/pages/home.css">
+</head>
+<body data-page="home">
+
+  <!-- Header otomatis dari layout.js -->
+  <div id="site-header"></div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-lines" aria-hidden="true"><span></span><span></span><span></span></div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow" data-reveal>Studio Kreatif oleh Rayden Viz</p>
+
+          <h1 class="hero-title">
+            <span class="hero-line" data-split>Setiap detail</span>
+            <span class="hero-line" data-split style="--d:150ms">dirancang untuk</span>
+            <span class="hero-line hero-line-gold"><em class="rotator text-gold" data-rotate="memikat.|berkelas.|dikenang.|menjual.">memikat.</em></span>
+          </h1>
+
+          <p class="hero-lead" data-reveal style="--d:300ms">
+            Web & app design, roblox map development, digital content & promotional media.
+            Satu studio dengan standar kualitas yang sama tingginya untuk setiap karya Anda.
+          </p>
+
+          <div class="hero-actions" data-reveal style="--d:420ms">
+            <a class="btn btn-gold" data-link="wa" href="#" data-magnetic>Mulai Proyek Anda <svg class="icon icon-move" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn-line" href="#layanan">Jelajahi Layanan</a>
+          </div>
+
+          <!-- Ubah angka sesuai data asli -->
+          <div class="hero-stats" data-reveal style="--d:540ms">
+            <div><strong data-count="8">0</strong><span>Layanan kreatif</span></div>
+            <div><strong data-count="25" data-suffix="+">0</strong><span>Proyek selesai</span></div>
+            <div><strong data-count="93" data-suffix="%">0</strong><span>Klien puas</span></div>
+          </div>
+        </div>
+
+        <!-- Objek 3D interaktif -->
+        <div class="hero-visual" data-reveal="scale" style="--d:200ms">
+          <div class="orbit orbit-1" aria-hidden="true"></div>
+          <div class="orbit orbit-2" aria-hidden="true"></div>
+          <canvas id="hero3d" aria-label="Objek 3D interaktif, geser untuk memutar"></canvas>
+          <span class="float-tag tag-1">Brand Identity</span>
+          <span class="float-tag tag-2">UI Design</span>
+          <span class="float-tag tag-3">3D Model</span>
+          <span class="float-tag tag-4">Roblox Studio</span>
+          <span class="drag-hint">Geser untuk memutar</span>
+        </div>
+      </div>
+
+      <a href="#layanan" class="scroll-cue" aria-label="Gulir ke bawah"><span></span></a>
+    </section>
+
+    <!-- TEKS BERJALAN -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track" id="marqueeTrack"></div>
+    </div>
+
+    <!-- LAYANAN -->
+    <section class="section" id="layanan">
+      <div class="container">
+        <div class="section-head split-head">
+          <div>
+            <p class="eyebrow" data-reveal>Layanan</p>
+            <h2 class="section-title" data-split>Semua kebutuhan kreatif, <em class="text-gold">dalam satu sentuhan.</em></h2>
+          </div>
+          <p class="section-lead" data-reveal style="--d:200ms">Pilih kategori untuk melihat detail paket, harga, dan portofolio. Setiap layanan dikerjakan langsung dengan perhatian penuh pada detail.</p>
+        </div>
+
+        <!-- Kartu layanan diisi oleh home.js -->
+        <div class="service-grid" id="serviceGrid"></div>
+      </div>
+    </section>
+
+    <!-- KEUNGGULAN -->
+    <section class="section section-alt">
+      <div class="container why">
+        <div class="why-intro">
+          <p class="eyebrow" data-reveal>Mengapa Rayden Viz</p>
+          <h2 class="section-title" data-split>Kualitas yang terasa, <em class="text-gold">bukan sekadar terlihat.</em></h2>
+          <p class="section-lead" data-reveal style="--d:200ms">Kami percaya karya yang baik lahir dari proses yang jujur, komunikasi yang jelas, dan ketelitian di setiap piksel.</p>
+          <a class="link-arrow" href="tos.html" data-reveal style="--d:300ms">Baca syarat layanan <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg></a>
+        </div>
+
+        <div class="why-list" id="whyList"></div>
+      </div>
+    </section>
+
+    <!-- PROSES -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head center">
+          <p class="eyebrow" data-reveal>Alur Kerja</p>
+          <h2 class="section-title" data-split>Empat langkah menuju <em class="text-gold">karya impian.</em></h2>
+        </div>
+
+        <div class="process" id="process">
+          <svg class="process-line" viewBox="0 0 1000 2" preserveAspectRatio="none" aria-hidden="true"><line x1="0" y1="1" x2="1000" y2="1"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- KARYA PILIHAN -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head split-head">
+          <div>
+            <p class="eyebrow" data-reveal>Karya Pilihan</p>
+            <h2 class="section-title" data-split>Sekilas hasil <em class="text-gold">kerja kami.</em></h2>
+          </div>
+          <p class="section-lead" data-reveal style="--d:200ms">Klik karya untuk melihat kategori lengkap beserta portofolio lainnya.</p>
+        </div>
+        <div class="showcase" id="showcase"></div>
+      </div>
+    </section>
+
+    <!-- AJAKAN -->
+    <section class="cta">
+      <canvas class="dot-field" aria-hidden="true"></canvas>
+      <div class="container cta-inner">
+        <p class="eyebrow" data-reveal>Siap Memulai</p>
+        <h2 class="cta-title">
+          <span data-split>Karya hebat dimulai</span>
+          <span data-split style="--d:150ms">dari <em class="text-gold">satu percakapan.</em></span>
+        </h2>
+        <p class="cta-lead" data-reveal style="--d:300ms">Ceritakan ide Anda, kami bantu wujudkan dengan sentuhan yang membuatnya berbeda.</p>
+        <div class="cta-actions" data-reveal style="--d:420ms">
+          <a class="btn btn-gold" data-link="wa" href="#" data-magnetic>Chat via WhatsApp</a>
+          <a class="btn btn-line" data-link="ig" href="#" data-magnetic>Kunjungi Instagram</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer otomatis dari layout.js -->
+  <div id="site-footer"></div>
+
+  <!-- Data dan pengaturan -->
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/data/layanan.js"></script>
+  <!-- Inti -->
+  <script src="assets/js/core/icons.js"></script>
+  <script src="assets/js/core/utils.js"></script>
+  <script src="assets/js/core/layout.js"></script>
+  <script src="assets/js/core/animations.js"></script>
+  <script src="assets/js/core/scene.js"></script>
+  <!-- Halaman -->
+  <script src="assets/js/pages/home.js"></script>
+  <script src="assets/js/core/boot.js"></script>
+</body>
+</html>
