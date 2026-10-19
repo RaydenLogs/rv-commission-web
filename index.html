@@ -55,7 +55,7 @@
           <!-- Ubah angka sesuai data asli -->
           <div class="hero-stats" data-reveal style="--d:540ms">
             <div><strong data-count="8">0</strong><span>Layanan kreatif</span></div>
-            <div><strong data-count="25" data-suffix="+">0</strong><span>Proyek selesai</span></div>
+            <div><strong data-count="0" data-suffix="+">0</strong><span>Proyek selesai</span></div>
             <div><strong data-count="93" data-suffix="%">0</strong><span>Klien puas</span></div>
           </div>
         </div>
@@ -172,6 +172,16 @@
   <script src="assets/js/data/list-layanan/polaroid.js"></script>
   <script src="assets/js/data/list-layanan/stiker.js"></script>
   <script src="assets/js/data/layanan.js"></script>
+  <script src="assets/js/data/status-pesanan.js"></script>
+  <script src="assets/js/data/list-status/selesai.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var selesaiStat = document.querySelector('.hero-stats > div:nth-child(2) strong');
+      if (selesaiStat && window.RV && Array.isArray(RV.pesananSelesai)) {
+        selesaiStat.setAttribute('data-count', RV.pesananSelesai.length);
+      }
+    });
+  </script>
   <!-- Inti -->
   <script src="assets/js/core/icons.js"></script>
   <script src="assets/js/core/utils.js"></script>

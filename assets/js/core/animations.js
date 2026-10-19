@@ -48,16 +48,37 @@ RV.anim = (function () {
     });
   }
 
+  function formatCounterValue(value, suffix) {
+    var target = Number(value) || 0;
+    var safeSuffix = suffix && suffix !== '+' ? suffix : '';
+
+    if (target >= 1000) {
+      var ribuan = Math.floor((target / 1000) * 10) / 10;
+      return ribuan.toLocaleString('id-ID', {
+        minimumFractionDigits: 1,
+        maximumFractionDigits: 1
+      }) + 'rb+';
+    }
+
+    if (target >= 100) {
+      var kelipatan25 = Math.round(target / 25) * 25;
+      return kelipatan25.toString() + '+';
+    }
+
+    return target.toString() + safeSuffix;
+  }
+
   // Penghitung angka
   function countUp(el) {
     var target = parseFloat(el.getAttribute('data-count'));
     var suffix = el.getAttribute('data-suffix') || '';
-    if (reduce) { el.textContent = target + suffix; return; }
+    if (reduce) { el.textContent = formatCounterValue(target, suffix); return; }
     var start = performance.now(), dur = 1800;
     (function step(now) {
       var t = Math.min((now - start) / dur, 1);
       var k = 1 - Math.pow(1 - t, 4);
-      el.textContent = Math.round(target * k) + suffix;
+      var current = Math.round(target * k);
+      el.textContent = formatCounterValue(current, suffix);
       if (t < 1) requestAnimationFrame(step);
     })(start);
   }
