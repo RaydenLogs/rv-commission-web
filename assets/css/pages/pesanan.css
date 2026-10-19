@@ -5,7 +5,13 @@
 .orders-section { padding-top: 0; }
 
 /* Ringkasan status */
-.order-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.order-stats {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+  max-width: none;
+  margin-inline: auto;
+}
 .stat-card {
   padding: 24px 24px 22px;
   border: 1px solid var(--line-soft);
@@ -14,6 +20,12 @@
   transition: border-color 0.4s var(--ease);
 }
 .stat-card:hover { border-color: color-mix(in srgb, var(--c) 45%, transparent); }
+.stat-card:nth-child(1), .stat-card:nth-child(2), .stat-card:nth-child(3) {
+  grid-column: span 2;
+}
+.stat-card:nth-child(4), .stat-card:nth-child(5) {
+  grid-column: span 3;
+}
 .stat-num { display: block; font-family: var(--font-display); font-size: clamp(2rem, 3.4vw, 2.6rem); font-weight: 600; letter-spacing: -0.04em; line-height: 1; color: var(--c); }
 .stat-label { display: flex; align-items: center; gap: 8px; margin-top: 10px; font-size: 0.8rem; color: var(--muted); }
 .stat-label i { width: 6px; height: 6px; border-radius: 50%; background: var(--c); }
@@ -65,13 +77,14 @@
 .order-updated { margin-top: 30px; font-size: 0.8rem; color: var(--dim); text-align: center; }
 
 @media (max-width: 960px) {
-  .order-stats { grid-template-columns: repeat(2, 1fr); }
   .order-card { grid-template-columns: 1fr 1fr; }
   .oc-main { grid-column: 1 / -1; }
 }
 
 @media (max-width: 600px) {
-  .order-stats { gap: 10px; }
+  .order-stats { gap: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stat-card:nth-child(n) { grid-column: span 1; }
+  .stat-card:nth-child(5) { grid-column: 1 / -1; }
   .stat-card { padding: 18px; }
   .order-toolbar .search-box { max-width: none; }
   .order-toolbar .chips { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px; margin-inline: -18px; padding-inline: 18px; scrollbar-width: none; }
