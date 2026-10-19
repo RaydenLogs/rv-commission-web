@@ -1,7 +1,3 @@
-/* =========================================
-  DATA PESANAN DITUNDA
-  ========================================= */
-
 window.RV = window.RV || {};
 
 RV.pesananDitunda = [

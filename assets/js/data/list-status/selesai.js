@@ -1,7 +1,3 @@
-/* =========================================
-  DATA PESANAN SELESAI
-  ========================================= */
-
 window.RV = window.RV || {};
 
 RV.pesananSelesai = [
