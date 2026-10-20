@@ -59,7 +59,7 @@ RV.pesananDitunda = [
     kode: "RV-RB-2605-001",
     klien: "Sp3tre",
     layanan: "roblox",
-    detail: "Music Club (Full-Dev)",
+    detail: "Designer Simulator (Full-Dev)",
     masuk: "6 Mei 2026",
     estimasi: "-",
     progres: 40,
