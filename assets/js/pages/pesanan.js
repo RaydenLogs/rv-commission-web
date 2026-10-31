@@ -67,7 +67,6 @@ RV.pageInit = function () {
         '</div>' +
         '<div class="oc-dates">' +
           '<span><small>Masuk</small>' + u.esc(d.masuk) + '</span>' +
-          '<span><small>Estimasi</small>' + u.esc(d.estimasi) + '</span>' +
         '</div>' +
         '<div class="oc-status">' +
           '<div class="oc-status-top"><span class="status status-' + d.status + live + '">' + s.label + '</span><b>' + d.progres + '%</b></div>' +

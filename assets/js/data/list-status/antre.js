@@ -2,21 +2,27 @@ window.RV = window.RV || {};
 
 RV.pesananAntre = [
   {
+    kode: "RV-PL-2610-005",
+    klien: "Nur Alya Zafirah",
+    layanan: "polaroid",
+    detail: "19 foto polaroid",
+    masuk: "21 Okt 2026",
+    progres: 0,
+  },
+  {
     kode: "RV-PL-2610-004",
     klien: "Kelaa",
     layanan: "polaroid",
-    detail: "154 foto polaroid (117+37)",
+    detail: "161 foto polaroid (117+44)",
     masuk: "19 Okt 2026",
-    estimasi: "-",
     progres: 0,
   },
   {
     kode: "RV-PL-2610-003",
     klien: "Neisya",
     layanan: "polaroid",
-    detail: "72 foto polaroid",
+    detail: "81 foto polaroid",
     masuk: "19 Okt 2026",
-    estimasi: "-",
     progres: 0,
   },
   {
@@ -25,7 +31,6 @@ RV.pesananAntre = [
     layanan: "polaroid",
     detail: "30 foto polaroid",
     masuk: "7 Okt 2026",
-    estimasi: "-",
     progres: 0,
   },
   {
@@ -34,7 +39,6 @@ RV.pesananAntre = [
     layanan: "polaroid",
     detail: "27 foto polaroid",
     masuk: "4 Okt 2026",
-    estimasi: "-",
     progres: 0,
   },
   {
@@ -43,7 +47,6 @@ RV.pesananAntre = [
     layanan: "polaroid",
     detail: "64 foto polaroid",
     masuk: "26 Sep 2026",
-    estimasi: "-",
     progres: 0,
   },
   {
@@ -52,7 +55,6 @@ RV.pesananAntre = [
     layanan: "polaroid",
     detail: "200 foto polaroid",
     masuk: "20 Sep 2026",
-    estimasi: "-",
     progres: 0,
   },
   {
@@ -61,16 +63,6 @@ RV.pesananAntre = [
     layanan: "polaroid",
     detail: "100 foto polaroid",
     masuk: "15 Sep 2026",
-    estimasi: "-",
-    progres: 0,
-  },
-  {
-    kode: "RV-PL-2609-002",
-    klien: "Seli",
-    layanan: "polaroid",
-    detail: "74 foto polaroid",
-    masuk: "14 Sep 2026",
-    estimasi: "-",
     progres: 0,
   },
   {
@@ -79,7 +71,6 @@ RV.pesananAntre = [
     layanan: "polaroid",
     detail: "51 foto polaroid",
     masuk: "2 Sep 2026",
-    estimasi: "-",
     progres: 0,
   },
   {
@@ -88,16 +79,6 @@ RV.pesananAntre = [
     layanan: "polaroid",
     detail: "80 foto polaroid",
     masuk: "30 Agu 2026",
-    estimasi: "-",
-    progres: 0,
-  },
-  {
-    kode: "RV-PL-2608-004",
-    klien: "Ain",
-    layanan: "polaroid",
-    detail: "12 foto polaroid",
-    masuk: "30 Agu 2026",
-    estimasi: "-",
     progres: 0,
   },
   {
@@ -106,7 +87,6 @@ RV.pesananAntre = [
     layanan: "polaroid",
     detail: "198 foto polaroid",
     masuk: "27 Agu 2026",
-    estimasi: "-",
     progres: 0,
   },
   {
@@ -115,7 +95,6 @@ RV.pesananAntre = [
     layanan: "polaroid",
     detail: "23 foto polaroid",
     masuk: "6 Agu 2026",
-    estimasi: "-",
     progres: 0,
   },
   {
@@ -124,7 +103,6 @@ RV.pesananAntre = [
     layanan: "polaroid",
     detail: "40 foto polaroid",
     masuk: "3 Agu 2026",
-    estimasi: "-",
     progres: 0,
   },
   {
@@ -133,7 +111,6 @@ RV.pesananAntre = [
     layanan: "polaroid",
     detail: "20 foto polaroid",
     masuk: "9 Jun 2026",
-    estimasi: "-",
     progres: 0,
   },
   {
@@ -142,7 +119,6 @@ RV.pesananAntre = [
     layanan: "polaroid",
     detail: "20 foto polaroid",
     masuk: "31 Mei 2026",
-    estimasi: "-",
     progres: 0,
   },
 ];

@@ -33,27 +33,6 @@ function parseTanggalMasuk(value) {
   return new Date(tahun, indeksBulan, hari).getTime();
 }
 
-RV.maskNamaKlien = function (nama) {
-  if (!nama || typeof nama !== 'string') return '-';
-  var value = nama.trim();
-  if (!value) return '-';
-  var parts = value.split(/\s+/);
-  if (parts.length === 1) {
-    var single = parts[0];
-    if (single.length <= 2) return single.charAt(0) + '*';
-    return single.slice(0, 2) + '*'.repeat(Math.max(2, single.length - 3)) + single.slice(-1);
-  }
-
-  var first = parts[0].replace(/[^A-Za-z]/g, '');
-  var last = parts[parts.length - 1].replace(/[^A-Za-z]/g, '');
-
-  if (!first && !last) return value.slice(0, 2) + '***';
-  if (!first) return '***' + last.slice(-2);
-  if (!last) return first.slice(0, 2) + '***';
-
-  return first.slice(0, 2) + '***' + last.slice(-1);
-};
-
 RV.generateKodePesanan = function (order, nomorUrut) {
   var layanan = order && order.layanan ? order.layanan : 'lainnya';
   var awal = RV.serviceInitials[layanan] || 'OT';
@@ -80,8 +59,6 @@ kelompokStatus.forEach(function (group) {
   (group.items || []).forEach(function (order) {
     if (!order) return;
     order.status = group.key;
-    order.estimasi = group.key === 'ditunda' ? '-' : (order.estimasi || '-');
-    order.klien = RV.maskNamaKlien(order.klien);
     RV.pesanan.push(order);
   });
 });

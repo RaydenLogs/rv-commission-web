@@ -7,7 +7,6 @@ RV.pesananSelesai = [
     layanan: "desain-grafis",
     detail: "Logo Kelas Informatika D25 Unsulbar",
     masuk: "19 Okt 2026",
-    estimasi: "19 Okt 2026",
     progres: 100,
   },
   {
@@ -16,7 +15,30 @@ RV.pesananSelesai = [
     layanan: "desain-grafis",
     detail: "Poster pemberitahuan - penerimaan staff",
     masuk: "11 Okt 2026",
-    estimasi: "11 Okt 2026",
+    progres: 100,
+  },
+  {
+    kode: "RV-PL-2610-002",
+    klien: "Nur aisyah rajang",
+    layanan: "polaroid",
+    detail: "100 foto polaroid",
+    masuk: "3 Okt 2026",
+    progres: 100,
+  },
+  {
+    kode: "RV-PL-2610-001",
+    klien: "Nisa",
+    layanan: "polaroid",
+    detail: "59 foto polaroid",
+    masuk: "2 Okt 2026",
+    progres: 100,
+  },
+  {
+    kode: "RV-PL-2608-004",
+    klien: "Ain",
+    layanan: "polaroid",
+    detail: "12 foto polaroid",
+    masuk: "30 Agu 2026",
     progres: 100,
   },
   {
@@ -25,7 +47,6 @@ RV.pesananSelesai = [
     layanan: "desain-grafis",
     detail: "Poster ajakan komunitas",
     masuk: "4 Agu 2026",
-    estimasi: "4 Agu 2026",
     progres: 100,
   },
   {
@@ -34,7 +55,6 @@ RV.pesananSelesai = [
     layanan: "desain-grafis",
     detail: "Poster komisi L2D",
     masuk: "8 Jun 2026",
-    estimasi: "8 Jun 2026",
     progres: 100,
   },
   {
@@ -43,7 +63,6 @@ RV.pesananSelesai = [
     layanan: "roblox",
     detail: "Environtment design - obby build (Build-Only)",
     masuk: "12 Apr 2026",
-    estimasi: "12 Apr 2026",
     progres: 100,
   },
   {
@@ -52,7 +71,6 @@ RV.pesananSelesai = [
     layanan: "desain-grafis",
     detail: "Icon/foto profil grup wibubers v2",
     masuk: "12 Apr 2026",
-    estimasi: "12 Apr 2026",
     progres: 100,
   },
   {
@@ -61,7 +79,6 @@ RV.pesananSelesai = [
     layanan: "desain-grafis",
     detail: "Poster komisi L2D",
     masuk: "12 Apr 2026",
-    estimasi: "12 Apr 2026",
     progres: 100,
   },
   {
@@ -70,7 +87,6 @@ RV.pesananSelesai = [
     layanan: "desain-grafis",
     detail: "Poster komisi art",
     masuk: "3 Apr 2026",
-    estimasi: "3 Apr 2026",
     progres: 100,
   },
   {
@@ -79,7 +95,6 @@ RV.pesananSelesai = [
     layanan: "desain-grafis",
     detail: "Banner promosi dan informasi komunitas Anipol",
     masuk: "3 Apr 2026",
-    estimasi: "3 Apr 2026",
     progres: 100,
   },
   {
@@ -88,7 +103,6 @@ RV.pesananSelesai = [
     layanan: "desain-grafis",
     detail: "Poster komisi Art & L2D normal-chibi",
     masuk: "24 Feb 2026",
-    estimasi: "24 Feb 2026",
     progres: 100,
   },
   {
@@ -97,7 +111,6 @@ RV.pesananSelesai = [
     layanan: "roblox",
     detail: "Build map club \"Koplo Night\" (Build + Script)",
     masuk: "29 Jan 2026",
-    estimasi: "29 Jan 2026",
     progres: 100,
   },
   {
@@ -106,7 +119,6 @@ RV.pesananSelesai = [
     layanan: "desain-grafis",
     detail: "Poster komisi L2D & YCH",
     masuk: "28 Jan 2026",
-    estimasi: "28 Jan 2026",
     progres: 100,
   },
   {
@@ -115,7 +127,6 @@ RV.pesananSelesai = [
     layanan: "desain-grafis",
     detail: "Logo kegiatan One Step Closer",
     masuk: "28 Jan 2026",
-    estimasi: "28 Jan 2026",
     progres: 100,
   },
   {
@@ -124,7 +135,6 @@ RV.pesananSelesai = [
     layanan: "desain-grafis",
     detail: "Logo Komunitas Discord Lunotera",
     masuk: "12 Jan 2026",
-    estimasi: "12 Jan 2026",
     progres: 100,
   },
   {
@@ -133,7 +143,6 @@ RV.pesananSelesai = [
     layanan: "desain-grafis",
     detail: "Art & L2d Commission Carrd",
     masuk: "11 Jan 2026",
-    estimasi: "11 Jan 2026",
     progres: 100,
   },
   {
@@ -142,7 +151,6 @@ RV.pesananSelesai = [
     layanan: "desain-grafis",
     detail: "Poster komisi Art & L2D",
     masuk: "9 Jan 2026",
-    estimasi: "9 Jan 2026",
     progres: 100,
   },
   {
@@ -151,7 +159,6 @@ RV.pesananSelesai = [
     layanan: "desain-grafis",
     detail: "Banner seafood simple",
     masuk: "25 Des 2025",
-    estimasi: "25 Des 2025",
     progres: 100,
   },
   {
@@ -160,7 +167,6 @@ RV.pesananSelesai = [
     layanan: "desain-grafis",
     detail: "Banner es kopi susu",
     masuk: "25 Des 2025",
-    estimasi: "25 Des 2025",
     progres: 100,
   },
   {
@@ -169,7 +175,6 @@ RV.pesananSelesai = [
     layanan: "desain-grafis",
     detail: "Template background poster l2d",
     masuk: "25 Des 2025",
-    estimasi: "25 Des 2025",
     progres: 100,
   },
   {
@@ -178,7 +183,6 @@ RV.pesananSelesai = [
     layanan: "desain-grafis",
     detail: "Desain baju kaos \"TAYER\"",
     masuk: "20 Des 2025",
-    estimasi: "20 Des 2025",
     progres: 100,
   },
   {
@@ -187,7 +191,6 @@ RV.pesananSelesai = [
     layanan: "desain-grafis",
     detail: "Poster komisi model Live2D",
     masuk: "12 Des 2025",
-    estimasi: "12 Des 2025",
     progres: 100,
   },
   {
@@ -196,7 +199,6 @@ RV.pesananSelesai = [
     layanan: "desain-grafis",
     detail: "Art Commission Carrd",
     masuk: "22 Sep 2025",
-    estimasi: "22 Sep 2025",
     progres: 100,
   },
   {
@@ -205,7 +207,6 @@ RV.pesananSelesai = [
     layanan: "desain-grafis",
     detail: "Template poster komisi L2D",
     masuk: "18 Jul 2025",
-    estimasi: "18 Jul 2025",
     progres: 100,
   },
 ];
